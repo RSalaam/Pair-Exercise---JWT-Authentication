@@ -22,6 +22,7 @@ app.get('/api/auth', async(req, res, next)=> {
     res.send(await User.byToken(req.headers.authorization));
   }
   catch(ex){
+    console.log(ex) 
     next(ex);
   }
 });
